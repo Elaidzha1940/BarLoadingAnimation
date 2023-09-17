@@ -17,7 +17,8 @@ struct ContentView: View {
     @State var height1 = 40.0
     @State var height2 = 70.0
     @State var height3 = 60.0
-    @State var height4 = 85.0
+    @State var height4 = 35.0
+    @State var height5 = 85.0
   
     
     var body: some View {
@@ -49,6 +50,11 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .animation(.easeInOut(duration: 0.25), value: height4)
             
+            RoundedRectangle(cornerRadius: 20)
+                .frame(width: 30, height: height5)
+                .foregroundColor(.white)
+                .animation(.easeInOut(duration: 0.25), value: height5)
+            
         }
         .preferredColorScheme(.dark)
         .onAppear {
@@ -57,9 +63,10 @@ struct ContentView: View {
                 
                 height0 = Double.random(in: 20...40)
                 height1 = Double.random(in: 20...60)
-                height2 = Double.random(in: 20...90)
+                height2 = Double.random(in: 20...110)
                 height3 = Double.random(in: 20...50)
-                height4 = Double.random(in: 20...30)
+                height4 = Double.random(in: 20...140)
+                height5 = Double.random(in: 20...60)
                 
             }
         }
